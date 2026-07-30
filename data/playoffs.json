@@ -1,0 +1,19 @@
+{
+  "playoffTeams": 6,
+  "weeksRemaining": 3,
+  "seeds": [
+    { "seed": 1, "team": "Diamond Dynasty", "status": "clinched" },
+    { "seed": 2, "team": "The Bat Flippers", "status": "clinched" },
+    { "seed": 3, "team": "Sultans of Swat", "status": "in" },
+    { "seed": 4, "team": "Rundown Royals", "status": "in" },
+    { "seed": 5, "team": "Balk to the Future", "status": "in" },
+    { "seed": 6, "team": "Ground Rule Doubles", "status": "on the bubble" },
+    { "seed": 7, "team": "Mendoza Line", "status": "on the bubble" },
+    { "seed": 8, "team": "Wild Pitchforks", "status": "eliminated" }
+  ],
+  "scenarios": [
+    "Ground Rule Doubles clinch a playoff spot with a win OR a Mendoza Line loss this week.",
+    "Mendoza Line control their own destiny: win out and they're in regardless of other results.",
+    "Wild Pitchforks are eliminated from playoff contention."
+  ]
+}

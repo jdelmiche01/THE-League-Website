@@ -1,0 +1,26 @@
+{
+  "week": 15,
+  "asOf": "2026-07-28",
+  "matchups": [
+    {
+      "teamA": { "name": "Diamond Dynasty", "score": 92.5 },
+      "teamB": { "name": "Cellar Dwellers", "score": 61.0 }
+    },
+    {
+      "teamA": { "name": "The Bat Flippers", "score": 78.0 },
+      "teamB": { "name": "Wild Pitchforks", "score": 74.5 }
+    },
+    {
+      "teamA": { "name": "Sultans of Swat", "score": 88.0 },
+      "teamB": { "name": "Southpaw Syndicate", "score": 65.5 }
+    },
+    {
+      "teamA": { "name": "Rundown Royals", "score": 70.0 },
+      "teamB": { "name": "Balk to the Future", "score": 82.5 }
+    },
+    {
+      "teamA": { "name": "Ground Rule Doubles", "score": 76.5 },
+      "teamB": { "name": "Mendoza Line", "score": 69.0 }
+    }
+  ]
+}
