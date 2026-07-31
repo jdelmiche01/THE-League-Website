@@ -1,6 +1,3 @@
-My mistake — I displayed that in a code viewer that isn't visible to you as a copyable block. Here it is directly, ready to copy:
-
-javascript
 // scripts/sync-fantrax.mjs
 //
 // Pulls standings, scores, and transactions from your Fantrax league and
