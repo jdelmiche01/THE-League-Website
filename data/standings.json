@@ -1,4 +1,105 @@
 {
   "asOf": "2026-07-31",
-  "teams": []
+  "teams": [
+    {
+      "rank": 1,
+      "team": "Lightning McLean",
+      "owner": "",
+      "wins": 13,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 12863.73,
+      "streak": "-"
+    },
+    {
+      "rank": 2,
+      "team": "Mizerella Sticks",
+      "owner": "",
+      "wins": 11,
+      "losses": 5,
+      "ties": 0,
+      "pointsFor": 12366.26,
+      "streak": "-"
+    },
+    {
+      "rank": 3,
+      "team": "The Duality",
+      "owner": "",
+      "wins": 10,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 12804.25,
+      "streak": "-"
+    },
+    {
+      "rank": 4,
+      "team": "Skeins! Skiens! Skiens!",
+      "owner": "",
+      "wins": 10,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 12425.72,
+      "streak": "-"
+    },
+    {
+      "rank": 5,
+      "team": "Fried Rice",
+      "owner": "",
+      "wins": 8,
+      "losses": 8,
+      "ties": 0,
+      "pointsFor": 13465.33,
+      "streak": "-"
+    },
+    {
+      "rank": 6,
+      "team": "Where There's a Witt There's a Way",
+      "owner": "",
+      "wins": 7,
+      "losses": 9,
+      "ties": 0,
+      "pointsFor": 12326.8,
+      "streak": "-"
+    },
+    {
+      "rank": 7,
+      "team": "Above Average Wood",
+      "owner": "",
+      "wins": 7,
+      "losses": 9,
+      "ties": 0,
+      "pointsFor": 11995.8,
+      "streak": "-"
+    },
+    {
+      "rank": 8,
+      "team": "Team AAAlex",
+      "owner": "",
+      "wins": 7,
+      "losses": 9,
+      "ties": 0,
+      "pointsFor": 11917.55,
+      "streak": "-"
+    },
+    {
+      "rank": 9,
+      "team": "Benge Drinking",
+      "owner": "",
+      "wins": 4,
+      "losses": 12,
+      "ties": 0,
+      "pointsFor": 12742.77,
+      "streak": "-"
+    },
+    {
+      "rank": 10,
+      "team": "Mark E Shaw Jr",
+      "owner": "",
+      "wins": 3,
+      "losses": 13,
+      "ties": 0,
+      "pointsFor": 10805.27,
+      "streak": "-"
+    }
+  ]
 }
