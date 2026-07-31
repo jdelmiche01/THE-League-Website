@@ -46,7 +46,7 @@ async function fxeaGet(endpoint, params = {}) {
 
 async function syncStandings() {
   const raw = await fxeaGet("getStandings");
-  const rows = raw?.standings ?? [];
+  const rows = Array.isArray(raw) ? raw : raw?.standings ?? [];
 
   // Try to preserve any owner names you've filled in by hand previously,
   // since Fantrax's public data doesn't include them.
