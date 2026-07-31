@@ -3,16 +3,14 @@
 // Pulls standings from your Fantrax league and writes it into
 // /data/standings.json, which the site reads from.
 //
-// IMPORTANT — read this before running:
 // This uses Fantrax's public "FXEA" endpoints, which are simple, no-login
 // GET requests. They only work if your league is set to PUBLIC
 // (Commissioner -> League Setup -> Misc -> Misc -> "League visible to
-// public"). This is a different, more reliable approach than an earlier
-// version of this script used.
+// public").
 //
-// Fantrax does NOT have a public endpoint for transactions or a trade log,
-// so transactions.json stays manually edited for now — same as the trade
-// block and news already are.
+// Fantrax does NOT have a public endpoint for transactions, a trade log, or
+// team owner names, so transactions.json and the "owner" column stay
+// manually edited — same as the trade block and news already are.
 //
 // Usage:
 //   FANTRAX_LEAGUE_ID=your-league-id node scripts/sync-fantrax.mjs
@@ -47,21 +45,44 @@ async function fxeaGet(endpoint, params = {}) {
 }
 
 async function syncStandings() {
-  const [standings, leagueInfo] = await Promise.all([
-    fxeaGet("getStandings"),
-    fxeaGet("getLeagueInfo"),
-  ]);
+  const raw = await fxeaGet("getStandings");
+  const rows = raw?.standings ?? [];
 
-  // TEMPORARY DEBUG LOGGING — once we confirm the real field names from
-  // these two endpoints, this logging and the fallback mapping below get
-  // replaced with the correct field names and this block gets deleted.
-  console.log("--- RAW getStandings RESPONSE (debug) ---");
-  console.log(JSON.stringify(standings ?? "NO RESPONSE BODY", null, 2).slice(0, 3000));
-  console.log("--- RAW getLeagueInfo RESPONSE (debug) ---");
-  console.log(JSON.stringify(leagueInfo ?? "NO RESPONSE BODY", null, 2).slice(0, 2000));
-  console.log("--- END DEBUG ---");
+  // Try to preserve any owner names you've filled in by hand previously,
+  // since Fantrax's public data doesn't include them.
+  const existingPath = path.join(DATA_DIR, "standings.json");
+  let existingByTeam = {};
+  if (fs.existsSync(existingPath)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(existingPath, "utf8"));
+      existingByTeam = Object.fromEntries(
+        (existing.teams ?? []).map((t) => [t.team, t])
+      );
+    } catch {
+      // ignore, start fresh
+    }
+  }
 
-  writeJson("standings.debug.json", { standings, leagueInfo });
+  const teams = rows
+    .sort((a, b) => a.rank - b.rank)
+    .map((row) => {
+      const [wins, losses, ties] = (row.points ?? "0-0-0")
+        .split("-")
+        .map((n) => Number(n) || 0);
+
+      return {
+        rank: row.rank,
+        team: row.teamName,
+        owner: existingByTeam[row.teamName]?.owner ?? "",
+        wins,
+        losses,
+        ties,
+        pointsFor: Number(row.totalPointsFor ?? 0),
+        streak: existingByTeam[row.teamName]?.streak ?? "-",
+      };
+    });
+
+  writeJson("standings.json", { asOf: today(), teams });
 }
 
 function writeJson(filename, contents) {
@@ -70,12 +91,20 @@ function writeJson(filename, contents) {
   console.log(`Wrote ${filePath}`);
 }
 
+function today() {
+  return new Date().toISOString().slice(0, 10);
+}
+
 async function main() {
   console.log(`Syncing Fantrax league ${LEAGUE_ID}...`);
 
   await syncStandings().catch((err) =>
     console.error("Standings sync failed:", err.message)
   );
+
+  // Clean up the debug file from earlier, if it's still there.
+  const debugPath = path.join(DATA_DIR, "standings.debug.json");
+  if (fs.existsSync(debugPath)) fs.unlinkSync(debugPath);
 
   // Update the "last synced" timestamp shown in the site footer.
   const leagueConfigPath = path.join(DATA_DIR, "league.json");
