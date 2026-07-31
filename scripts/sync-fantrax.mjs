@@ -54,19 +54,21 @@ async function fxRequest(method, extra = {}) {
   }
 
   const json = await res.json();
-  return json?.responses?.[0]?.data;
+  return json;
 }
 
 async function syncStandings() {
-  const data = await fxRequest("getStandings");
+  const json = await fxRequest("getStandings");
 
-  // TEMPORARY DEBUG LOGGING — once we see the real shape in the Action log,
-  // this block and the fallback mapping below get replaced with the correct
-  // field names and this can be deleted.
+  // TEMPORARY DEBUG LOGGING — this shows the ENTIRE raw response Fantrax
+  // sent back, including any error message, so we can see exactly what's
+  // going on. Once we know the real shape, this and the mapping below get
+  // replaced with the correct field names and this block gets deleted.
   console.log("--- RAW STANDINGS RESPONSE (debug) ---");
-  console.log(JSON.stringify(data, null, 2).slice(0, 4000));
+  console.log(JSON.stringify(json ?? "NO RESPONSE BODY AT ALL", null, 2).slice(0, 4000));
   console.log("--- END RAW STANDINGS RESPONSE ---");
 
+  const data = json?.responses?.[0]?.data;
   const teams = (data?.tableList?.[0]?.rows ?? []).map((row, i) => ({
     rank: i + 1,
     team: row.team?.name ?? row.teamName ?? "Unknown",
@@ -82,7 +84,8 @@ async function syncStandings() {
 }
 
 async function syncTransactions() {
-  const data = await fxRequest("getTransactionDetailsHistory");
+  const json = await fxRequest("getTransactionDetailsHistory");
+  const data = json?.responses?.[0]?.data;
   const transactions = (data?.transactions ?? []).slice(0, 25).map((t) => ({
     date: t.date ?? today(),
     team: t.teamName ?? "Unknown",
