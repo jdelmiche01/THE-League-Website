@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-08-10",
+  "asOf": "2026-08-11",
   "teams": [
     {
       "rank": 1,
@@ -8,7 +8,7 @@
       "wins": 15,
       "losses": 3,
       "ties": 0,
-      "pointsFor": 13779.45,
+      "pointsFor": 13855.38,
       "streak": "-"
     },
     {
@@ -18,7 +18,7 @@
       "wins": 12,
       "losses": 6,
       "ties": 0,
-      "pointsFor": 13582.66,
+      "pointsFor": 13730.36,
       "streak": "-"
     },
     {
@@ -28,7 +28,7 @@
       "wins": 11,
       "losses": 7,
       "ties": 0,
-      "pointsFor": 13949.48,
+      "pointsFor": 14075.78,
       "streak": "-"
     },
     {
@@ -38,7 +38,7 @@
       "wins": 10,
       "losses": 8,
       "ties": 0,
-      "pointsFor": 14602.53,
+      "pointsFor": 14728.18,
       "streak": "-"
     },
     {
@@ -48,7 +48,7 @@
       "wins": 10,
       "losses": 8,
       "ties": 0,
-      "pointsFor": 13402.75,
+      "pointsFor": 13414.18,
       "streak": "-"
     },
     {
@@ -58,7 +58,7 @@
       "wins": 8,
       "losses": 10,
       "ties": 0,
-      "pointsFor": 13462.42,
+      "pointsFor": 13506.77,
       "streak": "-"
     },
     {
@@ -68,7 +68,7 @@
       "wins": 8,
       "losses": 10,
       "ties": 0,
-      "pointsFor": 12964.07,
+      "pointsFor": 13014.57,
       "streak": "-"
     },
     {
@@ -78,7 +78,7 @@
       "wins": 7,
       "losses": 11,
       "ties": 0,
-      "pointsFor": 12822.22,
+      "pointsFor": 12851.57,
       "streak": "-"
     },
     {
@@ -88,7 +88,7 @@
       "wins": 5,
       "losses": 13,
       "ties": 0,
-      "pointsFor": 12174.48,
+      "pointsFor": 12219.68,
       "streak": "-"
     },
     {
@@ -98,7 +98,7 @@
       "wins": 4,
       "losses": 14,
       "ties": 0,
-      "pointsFor": 13825.25,
+      "pointsFor": 13923.85,
       "streak": "-"
     }
   ]
