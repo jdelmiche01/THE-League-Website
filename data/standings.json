@@ -1,64 +1,64 @@
 {
-  "asOf": "2026-08-16",
+  "asOf": "2026-08-17",
   "teams": [
     {
       "rank": 1,
       "team": "Lightning McLean",
       "owner": "",
       "wins": 15,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "pointsFor": 14334.87,
+      "pointsFor": 14422.55,
       "streak": "-"
     },
     {
       "rank": 2,
-      "team": "Mizerella Sticks",
+      "team": "The Duality",
       "owner": "",
       "wins": 12,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "pointsFor": 14128.06,
+      "pointsFor": 14826.1,
       "streak": "-"
     },
     {
       "rank": 3,
-      "team": "The Duality",
+      "team": "Mizerella Sticks",
       "owner": "",
-      "wins": 11,
+      "wins": 12,
       "losses": 7,
       "ties": 0,
-      "pointsFor": 14666.37,
+      "pointsFor": 14198.56,
       "streak": "-"
     },
     {
       "rank": 4,
       "team": "Fried Rice",
       "owner": "",
-      "wins": 10,
+      "wins": 11,
       "losses": 8,
       "ties": 0,
-      "pointsFor": 15357.95,
+      "pointsFor": 15454.06,
       "streak": "-"
     },
     {
       "rank": 5,
       "team": "Skeins! Skiens! Skiens!",
       "owner": "",
-      "wins": 10,
+      "wins": 11,
       "losses": 8,
       "ties": 0,
-      "pointsFor": 13855.78,
+      "pointsFor": 14052.42,
       "streak": "-"
     },
     {
       "rank": 6,
       "team": "Where There's a Witt There's a Way",
       "owner": "",
-      "wins": 8,
+      "wins": 9,
       "losses": 10,
       "ties": 0,
-      "pointsFor": 14127.8,
+      "pointsFor": 14217,
       "streak": "-"
     },
     {
@@ -66,9 +66,9 @@
       "team": "Above Average Wood",
       "owner": "",
       "wins": 8,
-      "losses": 10,
+      "losses": 11,
       "ties": 0,
-      "pointsFor": 13476.87,
+      "pointsFor": 13562.82,
       "streak": "-"
     },
     {
@@ -76,29 +76,29 @@
       "team": "Team AAAlex",
       "owner": "",
       "wins": 7,
-      "losses": 11,
+      "losses": 12,
       "ties": 0,
-      "pointsFor": 13361.92,
+      "pointsFor": 13454.27,
       "streak": "-"
     },
     {
       "rank": 9,
-      "team": "Mark E Shaw Jr",
+      "team": "Benge Drinking",
       "owner": "",
       "wins": 5,
-      "losses": 13,
+      "losses": 14,
       "ties": 0,
-      "pointsFor": 12675.58,
+      "pointsFor": 14473.95,
       "streak": "-"
     },
     {
       "rank": 10,
-      "team": "Benge Drinking",
+      "team": "Mark E Shaw Jr",
       "owner": "",
-      "wins": 4,
+      "wins": 5,
       "losses": 14,
       "ties": 0,
-      "pointsFor": 14330.78,
+      "pointsFor": 12829,
       "streak": "-"
     }
   ]
