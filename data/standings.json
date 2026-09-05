@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-04",
+  "asOf": "2026-09-05",
   "teams": [
     {
       "rank": 1,
@@ -88,7 +88,7 @@
       "wins": 6,
       "losses": 15,
       "ties": 0,
-      "pointsFor": 16125.48,
+      "pointsFor": 16119.88,
       "streak": "-"
     },
     {
@@ -98,7 +98,7 @@
       "wins": 6,
       "losses": 15,
       "ties": 0,
-      "pointsFor": 14210.42,
+      "pointsFor": 14213.32,
       "streak": "-"
     }
   ]
